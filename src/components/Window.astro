@@ -1,0 +1,90 @@
+---
+interface Props {}
+
+const {} = Astro.props;
+---
+
+<div class="window">
+    <div class="link-card">
+        <div class="test">   
+        </div>
+        <li>Full-Stack Developer</li>
+        <li>Security Specialist</li>
+        <hr>
+        <div class="test2">
+            <button>Back</button>
+            <button>Next</button>  
+            <button class="seperate-button">LinkedIn</button>  
+        </div>
+    </div>
+</div>
+<style>
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .1); 
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+.window {
+    height: 575px;
+}
+
+.link-card {
+    background: silver;
+    box-shadow:
+        inset -1px -1px #0a0a0a,
+        inset 1px 1px #dfdfdf,
+        inset -2px -2px grey,
+        inset 2px 2px #fff;
+    height: 575px;
+    display: flex;
+    flex-direction: column; /* Ensures proper stacking */
+    position: relative; /* Enables absolute positioning for children */
+    padding: 1px;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.seperate-button {
+    margin-left: 25px;
+}
+
+.test {
+    height: 40px;
+    background: linear-gradient(to right, #000084 55%, #8492ff 100%);
+    margin: 2px;
+    list-style: none;
+    display: flex;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.test2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end; /* Aligns the button to the right */
+    align-items: center; /* Centers the button vertically */
+    padding-right: 8px; /* Optional spacing */
+}
+
+button {
+    background: silver;
+    box-shadow:
+        inset -1px -1px #0a0a0a,
+        inset 1px 1px #fff,
+        inset -2px -2px grey,
+        inset 2px 2px #dfdfdf;
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: transparent;
+    min-height: 23px;
+    min-width: 75px;
+    padding: 0 12px;
+    text-shadow: 0 0 #222;
+    margin: 2px;
+}

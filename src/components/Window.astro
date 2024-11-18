@@ -6,15 +6,15 @@ const {} = Astro.props;
 
 <div class="window">
     <div class="link-card">
-        <div class="test">   
+        <div class="top-row">
+            <div class="window-title">EETU KARTTUNEN</div>
+            <button class="close-button">X</button>
         </div>
-        <li>Full-Stack Developer</li>
-        <li>Security Specialist</li>
         <hr>
-        <div class="test2">
-            <button>Back</button>
-            <button>Next</button>  
-            <button class="seperate-button">LinkedIn</button>  
+        <div class="bottom-row">
+            <a href="#" class="win-button">Back</a>
+            <a href="#" class="win-button">Next</a>
+            <a href="https://www.linkedin.com/in/eetukarttunen/" target="_blank" class="win-button seperate-button">LinkedIn</a>
         </div>
     </div>
 </div>
@@ -41,37 +41,76 @@ hr {
         inset 2px 2px #fff;
     height: 575px;
     display: flex;
-    flex-direction: column; /* Ensures proper stacking */
-    position: relative; /* Enables absolute positioning for children */
+    flex-direction: column;
+    position: relative;
     padding: 1px;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .seperate-button {
-    margin-left: 25px;
+    margin-left: 20px;
 }
 
-.test {
+.top-row {
     height: 40px;
     background: linear-gradient(to right, #000084 55%, #8492ff 100%);
     margin: 2px;
     list-style: none;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    color: white;
+    font-family: 'MS Sans Serif', sans-serif;
+    font-size: 14px;
+    user-select: none;
 }
 
-.test2 {
+.window-title {
+    font-weight: 600;
+    font-family: 'MS Sans Serif', sans-serif;
+}
+
+.bottom-row {
     position: absolute;
     bottom: 0;
     right: 0;
     height: 40px;
     display: flex;
-    justify-content: flex-end; /* Aligns the button to the right */
-    align-items: center; /* Centers the button vertically */
-    padding-right: 8px; /* Optional spacing */
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 8px;
+    margin: 2px;
 }
 
-button {
+.close-button {
+    background: silver;
+    box-shadow:
+        inset -1px -1px #0a0a0a,
+        inset 1px 1px #fff,
+        inset -2px -2px grey,
+        inset 2px 2px #dfdfdf;
+    font-family: 'MS Sans Serif', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+   
+    cursor: pointer;
+    box-sizing: border-box;
+    color: transparent;
+    min-height: 25px;
+    min-width: 25px;
+    text-shadow: 0 0 #222;
+    margin: 2px;
+}
+
+/* Common styles for buttons and links */
+.win-button, .win-button:link, .win-button:visited {
+    display: inline-block; /* To mimic button styling */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer;
     background: silver;
     box-shadow:
         inset -1px -1px #0a0a0a,
@@ -81,10 +120,28 @@ button {
     border: none;
     border-radius: 0;
     box-sizing: border-box;
-    color: transparent;
+    color: black; /* Visible text color */
+    font-family: 'MS Sans Serif', sans-serif;
+    font-size: 12px;
     min-height: 23px;
     min-width: 75px;
     padding: 0 12px;
+    text-align: center;
+    line-height: 23px; /* Vertically align text */
+    margin-right: 5px;
     text-shadow: 0 0 #222;
-    margin: 2px;
 }
+
+.win-button:hover {
+    background: #dfdfdf; /* Hover effect */
+}
+
+.win-button:active {
+    box-shadow:
+        inset 2px 2px #0a0a0a,
+        inset -1px -1px #fff,
+        inset 1px 1px grey,
+        inset -2px -2px #dfdfdf;
+    background: #848484;
+}
+</style>

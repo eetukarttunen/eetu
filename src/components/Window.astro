@@ -7,141 +7,199 @@ const {} = Astro.props;
 <div class="window">
     <div class="link-card">
         <div class="top-row">
-            <div class="window-title">EETU KARTTUNEN</div>
+            <div class="window-title">Welcome</div>
             <button class="close-button">X</button>
         </div>
-        <hr>
+        <div class="content-row">
+            <img src="./public/pxArt1.png" alt="Pixel Art" />
+            <div class="texti">
+                <h1 class="title-text">Eetu Karttunen</h1>
+                <p class="description-text">
+                    Full Stack Developer & Security professional
+                </p>
+            </div>
+        </div>
         <div class="bottom-row">
-            <a href="#" class="win-button">Back</a>
-            <a href="#" class="win-button">Next</a>
-            <a href="https://www.linkedin.com/in/eetukarttunen/" target="_blank" class="win-button seperate-button">LinkedIn</a>
+            <a
+                href="https://github.com/eetukarttunen"
+                target="_blank"
+                class="win-button">GitHub</a
+            >
+            <a
+                href="https://app.hackthebox.com/profile/1605342"
+                target="_blank"
+                class="win-button">Hack The Box</a
+            >
+            <a
+                href="https://www.linkedin.com/in/eetukarttunen/"
+                target="_blank"
+                class="win-button seperate-button">LinkedIn</a
+            >
         </div>
     </div>
 </div>
+
 <style>
-hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, .1); 
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-}
-.window {
-    height: 575px;
-}
+    @font-face {
+        font-family: "Pixelated MS Sans Serif";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://unpkg.com/98.css@0.1.20/dist/ms_sans_serif.woff")
+            format("woff");
+        src: url("https://unpkg.com/98.css@0.1.20/dist/ms_sans_serif.woff2")
+            format("woff2");
+    }
+    .description-text {
+        margin-left: 25px;
+        font-size: 18px;
+        color: black;
+        font-family: "Pixelated MS Sans Serif";
+    }
 
-.link-card {
-    background: silver;
-    box-shadow:
-        inset -1px -1px #0a0a0a,
-        inset 1px 1px #dfdfdf,
-        inset -2px -2px grey,
-        inset 2px 2px #fff;
-    height: 575px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 1px;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
+    img {
+        max-width: 250px;
+        max-height: 250px;
+        position: relative;
+        border: 2px solid black;
+    }
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: content-box;
+        height: 0;
+        overflow: visible;
+    }
+    .window {
+        height: 575px;
+    }
 
-.seperate-button {
-    margin-left: 20px;
-}
+    .link-card {
+        background: silver;
+        box-shadow:
+            inset -1px -1px #0a0a0a,
+            inset 1px 1px #dfdfdf,
+            inset -2px -2px grey,
+            inset 2px 2px #fff;
+        height: 375px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 1px;
+        transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
 
-.top-row {
-    height: 40px;
-    background: linear-gradient(to right, #000084 55%, #8492ff 100%);
-    margin: 2px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    color: white;
-    font-family: 'MS Sans Serif', sans-serif;
-    font-size: 14px;
-    user-select: none;
-}
+    .content-row {
+        display: flex;
+        padding: 20px;
+    }
 
-.window-title {
-    font-weight: 600;
-    font-family: 'MS Sans Serif', sans-serif;
-}
+    .title-text {
+        font-size: 30px;
+        color: #000;
+        max-width: 400px;
+        text-align: left;
+        margin: 0;
+        margin-left: 25px;
+        font-family: "Pixelated MS Sans Serif";
+    }
 
-.bottom-row {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 40px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 8px;
-    margin: 2px;
-}
+    .seperate-button {
+        margin-left: 20px;
+    }
 
-.close-button {
-    background: silver;
-    box-shadow:
-        inset -1px -1px #0a0a0a,
-        inset 1px 1px #fff,
-        inset -2px -2px grey,
-        inset 2px 2px #dfdfdf;
-    font-family: 'MS Sans Serif', sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    color: black;
-    text-align: center;
-   
-    cursor: pointer;
-    box-sizing: border-box;
-    color: transparent;
-    min-height: 25px;
-    min-width: 25px;
-    text-shadow: 0 0 #222;
-    margin: 2px;
-}
+    .top-row {
+        height: 40px;
+        background: linear-gradient(to right, #000000 55%, #141414 100%);
+        margin: 2px;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        color: white;
 
-/* Common styles for buttons and links */
-.win-button, .win-button:link, .win-button:visited {
-    display: inline-block; /* To mimic button styling */
-    text-decoration: none; /* Remove underline */
-    cursor: pointer;
-    background: silver;
-    box-shadow:
-        inset -1px -1px #0a0a0a,
-        inset 1px 1px #fff,
-        inset -2px -2px grey,
-        inset 2px 2px #dfdfdf;
-    border: none;
-    border-radius: 0;
-    box-sizing: border-box;
-    color: black; /* Visible text color */
-    font-family: 'MS Sans Serif', sans-serif;
-    font-size: 12px;
-    min-height: 23px;
-    min-width: 75px;
-    padding: 0 12px;
-    text-align: center;
-    line-height: 23px; /* Vertically align text */
-    margin-right: 5px;
-    text-shadow: 0 0 #222;
-}
+        font-size: 14px;
+        user-select: none;
+    }
 
-.win-button:hover {
-    background: #dfdfdf; /* Hover effect */
-}
+    .window-title {
+        color: rgb(220, 217, 217);
+        font-size: 15px;
+        font-weight: bold;
+        font-family: "Pixelated MS Sans Serif";
+    }
 
-.win-button:active {
-    box-shadow:
-        inset 2px 2px #0a0a0a,
-        inset -1px -1px #fff,
-        inset 1px 1px grey,
-        inset -2px -2px #dfdfdf;
-    background: #848484;
-}
+    .bottom-row {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 8px;
+        margin: 2px;
+    }
+
+    .close-button {
+        background: silver;
+        box-shadow:
+            inset -1px -1px #0a0a0a,
+            inset 1px 1px #fff,
+            inset -2px -2px grey,
+            inset 2px 2px #dfdfdf;
+        font-size: 12px;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+        cursor: pointer;
+        box-sizing: border-box;
+        color: transparent;
+        min-height: 25px;
+        min-width: 25px;
+        text-shadow: 0 0 #222;
+    }
+
+    /* Common styles for buttons and links */
+    .win-button,
+    .win-button:link,
+    .win-button:visited {
+        display: inline-block; /* To mimic button styling */
+        text-decoration: none; /* Remove underline */
+        cursor: pointer;
+        background: silver;
+        box-shadow:
+            inset -1px -1px #0a0a0a,
+            inset 1px 1px #fff,
+            inset -2px -2px grey,
+            inset 2px 2px #dfdfdf;
+        border: none;
+        border-radius: 0;
+        box-sizing: border-box;
+        color: black; /* Visible text color */
+        font-size: 18px;
+        min-width: 95px;
+        padding: 0 12px;
+        text-align: center;
+        line-height: 30px;
+        margin-right: 5px;
+        text-shadow: 0 0 #222;
+        font-family: "Pixelated MS Sans Serif";
+    }
+
+    .win-button:hover {
+        background: #dfdfdf; /* Hover effect */
+    }
+
+    .win-button:active {
+        box-shadow:
+            inset 2px 2px #0a0a0a,
+            inset -1px -1px #fff,
+            inset 1px 1px grey,
+            inset -2px -2px #dfdfdf;
+        background: #848484;
+    }
 </style>
